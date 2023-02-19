@@ -3,18 +3,19 @@ let jmeno = prompt('Jaké je tvoje jméno?')
 
 let prijmeni = prompt('Jaké je tvoje příjmení?')
 
-let vek = prompt ('Zadej rok svého narození.')
+let rokNarozeni = prompt ('Zadej rok svého narození.')
+    let datum = new Date();
+    let aktualniRok = datum.getFullYear();
+    let vek = aktualniRok - rokNarozeni;
 
-let barva = prompt('Jaká je tvoje oblíbená barva (prosím, uveď ji v angličtině?)')
+let barva = prompt('Jaká je tvoje oblíbená barva? (Prosím, uveď ji v angličtině.)')
 function zmenaBarvy () {
-    document.querySelector.innerHTML = 
-    document.body.style = barva;
+    let vystupProgramu = document.querySelector('.vystupProgramu')
+    vystupProgramu.style.color = barva;
 }
-    
-document.body.innerHTML = jmeno + ' ' + prijmeni + ' ' + vek
 
-/*
-let barva = prompt('Jaká je tvoje oblíbená barva (prosím, uveď ji v angličtině?')
-*/
+document.body.innerHTML = jmeno + ' ' + prijmeni + ' ' + vek + ' ' + 'let'
+    
+
 
 
